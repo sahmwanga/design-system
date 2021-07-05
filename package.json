@@ -1,7 +1,7 @@
 {
   "name": "sahmwanga-design-system",
   "description": "design system",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "dependencies": {
@@ -75,6 +75,7 @@
     "autoprefixer": "^9.8.6",
     "cross-env": "^7.0.3",
     "postcss": "^7.0.36",
+    "semantic-release": "^17.4.4",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   },
   "babel": {
@@ -86,5 +87,13 @@
         }
       ]
     ]
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }
