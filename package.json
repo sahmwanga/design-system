@@ -2,7 +2,6 @@
   "name": "sahmwanga-design-system",
   "description": "design system",
   "version": "0.1.0",
-  "private": true,
   "license": "MIT",
   "main": "dist/index.js",
   "dependencies": {
