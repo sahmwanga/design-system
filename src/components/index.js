@@ -5,4 +5,16 @@ import CardFooter from './cards/CardFooter';
 import CardHeader from './cards/CardHeader';
 import Tabs from './tabs/Tabs';
 
-export { Button, Card, CardFooter, CardHeader, CardBody, Tabs };
+import { Row, Column, Container } from './layout';
+
+export {
+  Button,
+  Card,
+  CardFooter,
+  CardHeader,
+  CardBody,
+  Tabs,
+  Row,
+  Column,
+  Container,
+};
