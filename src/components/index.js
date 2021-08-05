@@ -4,6 +4,7 @@ import CardBody from './cards/CardBody';
 import CardFooter from './cards/CardFooter';
 import CardHeader from './cards/CardHeader';
 import Tabs from './tabs/Tabs';
+import Input from './input/input';
 
 import { Row, Column, Container } from './layout';
 
@@ -17,4 +18,5 @@ export {
   Row,
   Column,
   Container,
+  Input,
 };

@@ -1,4 +1,20 @@
 import styled from 'styled-components';
+import { Container, Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 140,
+    width: 100,
+  },
+  control: {
+    padding: ' 8px',
+  },
+}));
 
 const getWidthString = (span) => {
   if (!span) return;
@@ -17,7 +33,8 @@ export const Row = styled.div`
 
 export const Column = styled.div`
   float: left;
-  margin: 0px 5px;
+  margin-left: 24px;
+  margin-right: 24px;
 
   ${({ xs }) => (xs ? getWidthString(xs) : 'width:100%')}
 
@@ -34,21 +51,35 @@ export const Column = styled.div`
   }
 `;
 
-export const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+export const StyledContainer = styled(Container)``;
+export const StyledGrid = ({ children }) => {
+  const classes = useStyles();
 
-  @media only screen and (min-width: 768px) {
-    width: 750px;
-  }
-
-  @media only screen and (min-width: 992px) {
-    width: 970px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    width: 1170px;
-  }
-`;
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>xs=12</Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>xs=3</Paper>
+        </Grid>
+      </Grid>
+    </div>
+  );
+};

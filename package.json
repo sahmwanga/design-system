@@ -1,7 +1,7 @@
 {
   "name": "sahmwanga-design-system",
   "description": "design system",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "files": [
     "dist",

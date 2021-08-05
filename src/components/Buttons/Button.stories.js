@@ -37,6 +37,7 @@ export const functionButton = () => (
   <Button
     color={select(label, optionsColor, defaultValueColor, 'color')}
     variant={select(label, optionsVariant, defaultValuevariant, 'variant')}
+    size={select(label, optionsSize, 'small', 'Size')}
     onClick={() => alert('alert')}
   >
     Function Button
@@ -47,13 +48,23 @@ export const iconButton = () => (
   <Button
     color={select(label, optionsColor, defaultValueColor, 'color')}
     variant={select(label, optionsVariant, defaultValuevariant, 'variant')}
+    size={select(label, optionsSize, 'small', 'Size')}
     icon={<DashboardOutlined />}
   >
     Icon Button
   </Button>
 );
 
-export const linkedButton = () => <Button href="#">Linked Button</Button>;
+export const linkedButton = () => (
+  <Button
+    href="#"
+    size={select(label, optionsSize, 'small', 'Size')}
+    color={select(label, optionsColor, defaultValueColor, 'color')}
+    variant={select(label, optionsVariant, defaultValuevariant, 'variant')}
+  >
+    Linked Button
+  </Button>
+);
 
 export default {
   component: Button,
